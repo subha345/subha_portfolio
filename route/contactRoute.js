@@ -38,7 +38,7 @@ router.post("/contact", (req, res) => {
     try {
       if (error){
         console.log(error)
-        return res.status(400).json({ msg: "Please Fill All The Fields!" });
+        return res.status(400).send(error);
       }
       res.status(200).json({ msg: "Thank You For Contacting Subhadatta." });
     } catch (error) {
